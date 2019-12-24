@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:group09/view/ingredien.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
-  static const List<Widget> _widgetOptions = <Widget>[
+  List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Home',
       style: optionStyle,
@@ -46,10 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
       'Index 1: Kategori',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: Ingredien',
-      style: optionStyle,
-    ),
+    Ingredien()
+    // Text(
+    //   'Index 2: Ingredien',
+    //   style: optionStyle,
+    // ),
   ];
 
   void _onItemTapped(int index) {
@@ -61,36 +63,33 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
-        child: AppBar(
-          title: foodIcon,
-          centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.people,
-                color: Colors.white,
-              ),
-              onPressed: () {},
-            )
-          ],
+      appBar: AppBar(
+        title: foodIcon,
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.people,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          )
+        ],
 
-          // untuk gradient background
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: <Color>[
-                  gradient1,
-                  gradient2,
-                  gradient3,
-                ])),
-          ),
+        // untuk gradient background
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: <Color>[
+                gradient1,
+                gradient2,
+                gradient3,
+              ])),
         ),
       ),
-      body: Center(
+      body: Container(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
