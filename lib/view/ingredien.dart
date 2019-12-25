@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:group09/model/model_ingredien.dart';
 import 'dart:convert';
+import 'package:group09/view/filter.dart';
 
 class Ingredien extends StatefulWidget {
   @override
@@ -45,12 +46,20 @@ class _IngredienState extends State<Ingredien> {
       ListView.builder(
           itemCount: data == null ? 0 : data.length,
           itemBuilder: (BuildContext context, int index) {
-            return Text(
-              data[index].strIngredient,
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+            return Card(
+              child: ListTile(
+                onTap: () {
+                  filterIngredien(data[index].strIngredient);
+                },
+                title: Text(
+                  data[index].strIngredient,
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
+                ),
               ),
             );
           });
@@ -65,5 +74,12 @@ class _IngredienState extends State<Ingredien> {
           .map<IngredienList>((json) => new IngredienList.fromJson(json))
           .toList();
     }
+  }
+
+  filterIngredien(String strIngredient) {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => FilterIngredien(strIngredient)));
   }
 }
