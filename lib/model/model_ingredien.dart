@@ -18,22 +18,22 @@ class IngredienList {
   }
 }
 
-class IngredienFilter {
-  String strMeal;
-  String strMealThumb;
-  String idMeal;
+// class IngredienFilter {
+//   String strMeal;
+//   String strMealThumb;
+//   String idMeal;
 
-  IngredienFilter({
-    this.strMeal,
-    this.strMealThumb,
-    this.idMeal,
-  });
+//   IngredienFilter({
+//     this.strMeal,
+//     this.strMealThumb,
+//     this.idMeal,
+//   });
 
-  factory IngredienFilter.fromJson(Map<String, dynamic> parsedJson) {
-    return IngredienFilter(
-      strMeal: parsedJson['strMeal'],
-      strMealThumb: parsedJson['strMealThumb'],
-      idMeal: parsedJson['idMeal'],
-    );
-  }
-}
+//   factory IngredienFilter.fromJson(Map<String, dynamic> parsedJson) {
+//     return IngredienFilter(
+//       strMeal: parsedJson['strMeal'],
+//       strMealThumb: parsedJson['strMealThumb'],
+//       idMeal: parsedJson['idMeal'],
+//     );
+//   }
+// }

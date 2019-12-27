@@ -3,23 +3,19 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
-
 class Category {
   String idCategory;
   String strCategory;
   String strCategoryThumb;
-  Category(
-    {this.idCategory,
-    this.strCategory,
-    this.strCategoryThumb
-  });
+  Category({this.idCategory, this.strCategory, this.strCategoryThumb});
 
-  factory Category.fromJson(Map<string, dynamic> parsedJson) {
-    
+  factory Category.fromJson(Map<String, dynamic> parsedJson) {
+    return Category(
+        idCategory: parsedJson['id'],
+        strCategory: parsedJson['Category'],
+        strCategoryThumb: parsedJson['CategoryThumb']);
   }
-
 }
-
 
 class Meal {
   String idMeal;
@@ -36,20 +32,11 @@ class Meal {
       this.strIngredient});
 
   factory Meal.fromJson(Map<String, dynamic> parsedJson) {
-    String _strIngredient = parsedJson['strIngredient1'] +
-        ", " +
-        parsedJson['strIngredient2'] +
-        ", " +
-        parsedJson['strIngredient3'] +
-        ", " +
-        parsedJson['strIngredient4'] +
-        ", " +
-        parsedJson['strIngredient5'];
     return Meal(
-        idMeal: parsedJson['idMeal'],
-        strMeal: parsedJson['strMeal'],
-        strInstructions: parsedJson['strInstructions'],
-        strMealThumb: parsedJson['strMealThumb'],
-        strIngredient: _strIngredient);
+        idMeal: parsedJson['id'],
+        strMeal: parsedJson['Meal'],
+        strInstructions: parsedJson['Instructions'],
+        strMealThumb: parsedJson['MealThum'],
+        strIngredient: parsedJson['Ingredient']);
   }
 }
