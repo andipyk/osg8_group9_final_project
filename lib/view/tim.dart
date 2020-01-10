@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:group09/model/model_kategori.dart';
 import 'dart:convert';
-import 'package:group09/view/detail.dart';
+import 'package:group09/model/model_tim.dart';
 
-
-class Kategori extends StatefulWidget {
+class TentangTim extends StatefulWidget {
   @override
-  _KategoriState createState() => _KategoriState();
+  _TentangTimState createState() => _TentangTimState();
 }
 
-class _KategoriState extends State<Kategori> {
+class _TentangTimState extends State<TentangTim> {
   @override
   Widget build(BuildContext context) {
-    return getList();
+    return getTim();
   }
 
 
-  getList() {
+  getTim() {
     return Container(
       child: Center(
         child: FutureBuilder(
             future: DefaultAssetBundle.of(context)
-                .loadString('data/data_categories.json'),
+                .loadString('data/data_tim.json'),
             builder: (ctx, snapshot) {
+
               if (snapshot.hasData) {
                 if (snapshot.data != null) {
-                  List<KategoriList> meals = parseJson(snapshot.data);
-                  return meals.isNotEmpty
-                      ? _showList(context, meals)
-                      : Center(child: Text("No Category List Found.."));
+                  List<Tim> tim = parseJson(snapshot.data);
+                  return tim.isNotEmpty
+                      ? _showList(context, tim)
+                      : Center(child: Text("No Tim List Found.."));
                 } else {
                   return Center(child: CircularProgressIndicator());
                 }
@@ -40,8 +39,7 @@ class _KategoriState extends State<Kategori> {
     );
   }
 
-
-  Widget _showList(BuildContext context, List<KategoriList> data) => GridView.builder(
+  Widget _showList(BuildContext context, List<Tim> data) => GridView.builder(
     itemCount: data == null ? 0 : data.length,
     gridDelegate:
     SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
@@ -54,22 +52,15 @@ class _KategoriState extends State<Kategori> {
           margin: EdgeInsets.all(10),
           child: GridTile(
             child: FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => KategoriDetail(data[index])),
-                  );
-
-                },
-                child: Image.network(data[index].strCategoryThumb),
+                onPressed: () {},
+                child: Image.asset('images/${data[index].foto}'),
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 padding: EdgeInsets.all(0)),
             footer: Container(
               color: Colors.white70,
               padding: EdgeInsets.all(3.0),
               child: Text(
-                data[index].strCategory,
+                data[index].nama,
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
@@ -83,13 +74,14 @@ class _KategoriState extends State<Kategori> {
     },
   );
 
-  List<KategoriList> parseJson(String response) {
+  List<Tim> parseJson(String response) {
     if (response == null) {
       return [];
     } else {
       final parsed =
       json.decode(response.toString()).cast<Map<String, dynamic>>();
-      return parsed.map<KategoriList>((json) => KategoriList.fromJson(json)).toList();
+      return parsed.map<Tim>((json) => Tim.fromJson(json)).toList();
     }
   }
+
 }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:group09/view/ingredien.dart';
+import 'package:group09/view/app.dart';
+import 'package:group09/view/kategori.dart';
+import 'package:group09/view/tim.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -40,19 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Kategori',
-      style: optionStyle,
-    ),
-    Ingredien()
-    // Text(
-    //   'Index 2: Ingredien',
-    //   style: optionStyle,
-    // ),
+    TentangApp(),
+    Kategori(),
+    TentangTim(),
   ];
 
   void _onItemTapped(int index) {
@@ -100,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.restaurant_menu),
-            title: Text("Beranda"),
+            title: Text("Tentang App"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more),
@@ -108,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.description),
-            title: Text("Ingredien"),
+            title: Text("Tentang Tim"),
           ),
         ],
         currentIndex: _selectedIndex,

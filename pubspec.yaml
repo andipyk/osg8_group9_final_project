@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+#  shared_preferences: 0.5.6
+
 
   http: ^0.12.0+2
 
@@ -41,9 +43,16 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - data/data_ingredien.json
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+    - data/data_categories.json
+    - data/data_tim.json
+    - images/meal-icon.png
+    - images/p1.jpg
+    - images/p2.jpg
+    - images/p3.jpg
+    - images/p4.jpg
+    - images/p5.jpg
+    - images/p6.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

@@ -1,0 +1,44 @@
+[
+  {
+    "no": "1",
+    "nama": "Adnan Zain",
+    "email": "gbadnanzain@gmail.com",
+    "foto": "p1.jpg",
+    "job": "Ketua"
+  },
+  {
+    "no": "2",
+    "nama": "Arista Wahyu Saputra",
+    "email": "aristawahyusaputra@gmail.com",
+    "foto": "p2.jpg",
+    "job": "Flutter Developer"
+  },
+  {
+    "no": "3",
+    "nama": "Andi Syafrianda",
+    "email": "andisyafrianda@gmail.com",
+    "foto": "p3.jpg",
+    "job": "Flutter Developer"
+  },
+  {
+    "no": "4",
+    "nama": "M Andi Hidayat",
+    "email": "mobiledevelopt@gmail.com",
+    "foto": "p4.jpg",
+    "job": "Flutter Developer"
+  },
+  {
+    "no": "5",
+    "nama": "Rosid Mustofa",
+    "email": "xrosid@gmail.com",
+    "foto": "p5.jpg",
+    "job": "Flutter Developer"
+  },
+  {
+    "no": "6",
+    "nama": "Zulkifli Raihan",
+    "email": "zulkifliraihan29@gmail.com",
+    "foto": "p6.jpg",
+    "job": "Flutter Developer"
+  }
+]
