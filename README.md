@@ -12,9 +12,9 @@ API
 
 
 ## Screenshot:
-![Alt text](/screenshots/01.png?raw=true "Optional Title")
-![Alt text](/screenshots/02.png?raw=true "Optional Title")
-![Alt text](/screenshots/03.png?raw=true "Optional Title")
+![Alt img](/screenshots/01.png "screenshots 01"){:height="30%" width="30%"}
+![Alt img](/screenshots/02.png "screenshots 02"){:height="30%" width="30%"}
+![Alt img](/screenshots/03.png "screenshots 03"){:height="30%" width="30%"}
 
 
 
@@ -37,3 +37,4 @@ email: aristawahyusaputra@gmail.com
 Whatsapp: 089686363519
 email: andisyafrianda@gmail.com
 github: https://github.com/andipyk/osg8_group9_final_project
+
