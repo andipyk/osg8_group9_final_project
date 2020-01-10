@@ -1,16 +1,35 @@
-# group09
+Flutter Meal DB Makanan ( Tugas Akhir - OSG8 Group 9 )
+Aplikasi Flutter menampilkan daftar Makanan berdasarkan kategori dan resep.
+Menggunakan API https://themealdb.com/ sebagai data.
 
-A new Flutter project.
+Peserta:
+Adnan, Andi dan Aris.
 
-## Getting Started
+Build with:
+Flutter
+https://www.themealdb.com/ (sebagai sumber data)
+API
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Screenshot:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Created By:
+Adnan, Model untuk category, Ingredien
+Aris, API 
+Andi, Adobe XD prototype, Controller, View.
+
+Info lebih lengkap:
+
+Adnan Zain
+Whatsapp: 08999388890
+email:gbadnanzain@gnmail.com
+
+Aris
+Whatsapp: 087889536494
+email: aristawahyusaputra@gmail.com
+
+Andi 
+Whatsapp: 089686363519
+email: andisyafrianda@gmail.com
+github: https://github.com/andipyk/osg8_group9_final_project
